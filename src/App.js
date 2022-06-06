@@ -1,13 +1,36 @@
-import './App.css';
-import { DatePicker } from 'antd';
-import 'antd/dist/antd.css'; 
+import { useState } from 'react';
+import 'antd/dist/antd.css';
+import { DatePicker, message, Alert, Button } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
 
-function App() {
+const App = () => {
+  const [date, setDate] = useState(null);
+  const handleChange = value => {
+    message.info(`Selected Date: ${value ? value.format('YYYY-MM-DD') : 'None'}`);
+    setDate(value);
+  };
   return (
-    <div className="App">
-      <DatePicker />
-    </div>
+    <>
+      <div style={{ width: 400, margin: '100px auto' }}>
+        <DatePicker onChange={handleChange} />
+        <div style={{ marginTop: 16 }}>
+          {/* Selected Date: {date ? date.format('YYYY-MM-DD') : 'None'} */}
+          <Alert message="Selected Date" description={date ? date.format('YYYY-MM-DD') : 'None'} />
+        </div>
+      </div>
+      <Button type="text" block={true} danger={true} shape="round">Primary Button</Button>
+      <Button>Default Button</Button>
+      <Button type="dashed">Dashed Button</Button>
+      <br />
+      <Button type="text">Text Button</Button>
+      <Button type="link" href='abc'>Link Button</Button>
+      <Button type="primary" shape="circle" icon={<SearchOutlined />} />
+      <Button type="primary" shape="circle" icon={<SearchOutlined />} ghost />
+      <Button ghost>
+      Primary
+    </Button>
+    </>
   );
-}
+};
 
 export default App;
