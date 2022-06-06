@@ -2,6 +2,15 @@ import { useState } from 'react';
 import 'antd/dist/antd.css';
 import { DatePicker, message, Alert, Button } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
+import {
+  HomeOutlined,
+  LoadingOutlined,
+  SettingFilled,
+  SmileOutlined,
+  SyncOutlined,
+} from '@ant-design/icons';
+import { Space } from 'antd';
+import { StarOutlined, StarFilled, StarTwoTone } from '@ant-design/icons';
 
 const App = () => {
   const [date, setDate] = useState(null);
@@ -27,8 +36,19 @@ const App = () => {
       <Button type="primary" shape="circle" icon={<SearchOutlined />} />
       <Button type="primary" shape="circle" icon={<SearchOutlined />} ghost />
       <Button ghost>
-      Primary
-    </Button>
+        Primary
+      </Button>
+      <Space>
+        <HomeOutlined />
+        <SettingFilled />
+        <SmileOutlined />
+        <SyncOutlined spin />
+        <SmileOutlined rotate={180} />
+        <LoadingOutlined />
+      </Space>
+      <StarOutlined />
+      <StarFilled />
+      <StarTwoTone twoToneColor="#eb2f96" />
     </>
   );
 };
