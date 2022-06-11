@@ -14,6 +14,7 @@ import { StarOutlined, StarFilled, StarTwoTone } from '@ant-design/icons';
 import Typo from "./components/Typo";
 import TypoText from './components/TypoText';
 import Editable from './components/Editable';
+import Expandable from './components/Expanable';
 
 const App = () => {
   const [date, setDate] = useState(null);
@@ -51,7 +52,7 @@ const App = () => {
       <StarOutlined />
       <StarFilled />
       <StarTwoTone twoToneColor="#eb2f96" /> */}
-      <Editable />
+      <Expandable />
     </>
   );
 };
