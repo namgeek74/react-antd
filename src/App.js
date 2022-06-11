@@ -11,6 +11,9 @@ import {
 } from '@ant-design/icons';
 import { Space } from 'antd';
 import { StarOutlined, StarFilled, StarTwoTone } from '@ant-design/icons';
+import Typo from "./components/Typo";
+import TypoText from './components/TypoText';
+import Editable from './components/Editable';
 
 const App = () => {
   const [date, setDate] = useState(null);
@@ -20,14 +23,13 @@ const App = () => {
   };
   return (
     <>
-      <div style={{ width: 400, margin: '100px auto' }}>
+      {/* <div style={{ width: 400, margin: '100px auto' }}>
         <DatePicker onChange={handleChange} />
         <div style={{ marginTop: 16 }}>
-          {/* Selected Date: {date ? date.format('YYYY-MM-DD') : 'None'} */}
           <Alert message="Selected Date" description={date ? date.format('YYYY-MM-DD') : 'None'} />
         </div>
-      </div>
-      <Button type="text" block={true} danger={true} shape="round">Primary Button</Button>
+      </div> */}
+      {/* <Button type="text" block={true} danger={true} shape="round">Primary Button</Button>
       <Button>Default Button</Button>
       <Button type="dashed">Dashed Button</Button>
       <br />
@@ -48,7 +50,8 @@ const App = () => {
       </Space>
       <StarOutlined />
       <StarFilled />
-      <StarTwoTone twoToneColor="#eb2f96" />
+      <StarTwoTone twoToneColor="#eb2f96" /> */}
+      <Editable />
     </>
   );
 };
