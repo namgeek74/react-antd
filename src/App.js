@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import 'antd/dist/antd.css';
-import { DatePicker, message, Alert, Button } from 'antd';
+import { DatePicker, message, Alert, Button, Divider } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import {
   HomeOutlined,
@@ -15,6 +15,7 @@ import Typo from "./components/Typo";
 import TypoText from './components/TypoText';
 import Editable from './components/Editable';
 import Expandable from './components/Expanable';
+import CustomDivider from "./components/CustomDivider";
 
 const App = () => {
   const [date, setDate] = useState(null);
@@ -52,7 +53,12 @@ const App = () => {
       <StarOutlined />
       <StarFilled />
       <StarTwoTone twoToneColor="#eb2f96" /> */}
-      <Expandable />
+      {/* <CustomDivider /> */}
+      Text
+      <Divider type="vertical" />
+      <a href="#">Link</a>
+      <Divider type="vertical" />
+      <a href="#">Link</a>
     </>
   );
 };
